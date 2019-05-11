@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    
+<head>  
+<title> Shape of the Earth </title>
+   <link href="https://fonts.googleapis.com/css?family=Gugi|Roboto+Slab" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    
+    
+   <style>
+    
+       
+   body { 
+			background: url( earth_horizon.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+       margin: 0;
+     
+		}
+		
+       
+       
+       
+       #contain {
+           
+         text-align: center;
+        
+          
+          
+       }
+       
+      
+       
+     
+       
+       #welcome {
+             
+           text-align: justify;
+           padding-left: 20%;
+      margin-bottom: 0; 
+           width: 80%; 
+           font-family: 'Gugi', cursive;
+           font-size: 65px;
+           color: white;
+       }
+       
+        
+       
+       div.para {
+           background-color: rgba(16, 24, 51, 0.7);
+           width: 100%;
+       }
+       
+       div.para p {
+        
+           font-family: 'Roboto Slab', serif;
+           font-size: 15px;
+           padding: 15px 20% 25px 20%;
+            text-align: justify; 
+           color: white;
+           line-height: 28px;
+          
+            
+            
+       }
+       
+       .pr {
+           
+            
+        margin:  20% auto;   
+        background-color: rgba(204, 230, 255, 0.2);
+       max-width: 50%; 
+        border-radius: 45px;
+        min-width: 45%;   
+           
+       }
+       
+       .prompt {
+        line-height: 50px;   
+         padding: 23px;   
+        font-family: 'Roboto Slab', serif;
+        font-size: 24px;
+           
+       }
+       
+       input {
+        
+        max-width: 95%;
+        width: 160px;   
+        font-size: 15px;   
+        padding: 10px; 
+        font-family: 'Roboto Slab', serif;   
+        border: black solid 3px;
+         margin: 0 auto;
+         border-radius: 40px;  
+       }
+       
+       button {
+           
+        height: 50px;
+        width:150px;
+        font-size: 20px;  
+       font-family: 'Roboto Slab', serif;   
+        font-weight: 900;   
+         border-radius: 20px;
+         border: none;
+         background-color: white;
+         margin-bottom: 20px;  
+       }
+       
+        
+       
+       
+       button.next {
+           
+ 
+           width: 120px;
+       }
+       
+
+       
+       
+       .finale {
+           
+         
+         color: crimson;
+           
+       }
+       
+       
+       p.small {
+           
+        font-size: 12px;
+        text-align: none;   
+        padding: 15px;   
+        line-height: 25px;
+    
+           
+       }
+       
+       
+       .navbar {
+         
+    background-color: rgba(255, 2555, 255, 1);
+     overflow: hidden;
+   
+         text-align: center;
+ bottom: 0;
+  width: 100%;
+   height: 35px;      
+   position: fixed; 
+                   padding: 2vh;     
+   
+   
+              
+     }
+     
+     .navbar a {
+         
+      font-size: 3vh;
+         font-family: 'Gugi', cursive;
+         letter-spacing: 5px; 
+   
+             
+      color: black;
+  text-decoration: none;
+     }
+     
+           .navbar a:hover {
+               
+            color: coral;   
+           }  
+     
+           
+         
+    </style> 
+    
+</head>    
+    
+
+<body>
+    <div class="navbar"><a class="linky" href="front_page.html">Back to Main Page<br></a></div> 
+   <div id="contain">  
+        
+   <div class="begin"> 
+        
+      <p id="welcome"> Welcome. </p> 
+       <div class="big"> 
+       <div class="para">
+           <p> 
+       With all the fake news and conspiracies circulating, people are confused. Now, more than ever, everyone is looking to you for guidance about what's really going on. You've just made a startling discovery, and you've written an article for NASA with the details. You just have to add the finishing touches...
+       </p>
+       </div>
+        </div> 
+    <button class="but" onclick="execute()"> Begin </button> 
+       
+       
+       </div>
+       <div class="pr"> 
+  <div class="prompt"></div>   
+  <button class="next">Next</button> 
+       </div>
+       
+       <div class="finale"></div>
+       
+    <script type="text/javascript">
+        
+        
+        function first()
+{ $('.next').hide();                
+$('.pr').hide(); 
+}
+  first();      
+        
+     
+        
+        
+        
+        
+      function execute()
+        
+         
+{                  
+   $('.begin').hide();
+    $('.next').show();
+    $('.pr').show();
+     
+        
+  var prompts = [
+ 'Noun:',
+ 'Year:',
+ 'Adjective:',
+ 'Your Name:',
+ 'Adjective:',     
+ 'Person:',
+ 'Place:',
+ 'Verb:',
+ 'Noun:',
+ 'Adjective:',
+ 'Adjective:',
+ 'Adjective:',
+ 'Plural Noun:',
+ 'Noun:',
+ 'Verb:',
+ 'Adverb:',
+ 'Body Part:',     
+ 'Number:',
+  'Website:'    
+      ];  
+        
+  var answers = [];      
+    
+  var currentPrompt = 0;
+        
+         
+        var nextPrompt = function () {
+             
+  if (currentPrompt != 0) {
+    answers.push($('input').val());
+  }
+   
+      if (currentPrompt < prompts.length) {      
+      
+  
+          $('.prompt').html(prompts[currentPrompt] + '<br><input type="text">'); 
+     currentPrompt = currentPrompt + 1;       
+        }
+        
+   else {
+       
+   showFinal();   
+   }  
+            
+            
+            
+          }
+        
+        var showFinal = function() {
+	   $('.prompt').html('<p class="small">The Earth is Actually Shaped Like a <span class="finale"> '+answers[0]+' </span> <br><br><br> In <span class="finale">'+answers[1]+'</span>, the  <span class="finale">'+answers[2]+'</span> and prominent researcher, Dr. <span class="finale">'+answers[3]+'</span>, made a startling discovery. "The Earth is shaped like a <span class="finale">'+answers[0]+'</span>! At first it sounded <span class="finale">'+answers[4]+'</span> to me," says <span class="finale">'+answers[3]+'</span>. But when <span class="finale">'+answers[5]+'</span> and I went to <span class="finale">'+answers[6]+'</span> to investigate, we found the edge of the Earth. You could <span class="finale">'+answers[7]+'</span> right off!" <br><br> And what would you see over the edge? It seems that there&#39s a large <span class="finale">'+answers[8]+'</span>, and nothing else but dark, <span class="finale">'+answers[9]+'</span> space. <br><br> "Don&#39t be too <span class="finale">'+answers[10]+'</span>, when you&#39re near the edge," says <span class="finale">'+answers[3]+'</span>, "or you&#39ll die a <span class="finale">'+answers[11]+'</span> death. If you fall off, you&#39ll first feel like there are <span class="finale">'+answers[12]+'</span> crawling on your skin, and a <span class="finale">'+answers[13]+'</span> hitting your brain. Then, you&#39ll begin to <span class="finale">'+answers[14]+'</span>, and you&#39ll explode <span class="finale">'+answers[15]+'</span>. Your <span class="finale">'+answers[16]+'</span> will scatter throughout space. You can read more about this in the short, <span class="finale">'+answers[17]+'</span>-page handbook I wrote: The Earth is a <span class="finale">'+answers[0]+'</span> and you shouldn&#39t fall off. You can buy it on my website, www.<span class="finale">'+answers[18]+'</span>.com." <br><br> And there you have it- the real story on the shape of our planet. Thank you to Dr. <span class="finale">'+answers[3]+'</span> for sharing these insights!</p>');
+            
+            $('button').hide();
+        }
+          
+   $('.next').click(function() {
+      nextPrompt();
+  });      
+  nextPrompt(); 
+        
+        }
+    </script>
+    </div> 
+</body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
+ 

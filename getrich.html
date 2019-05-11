@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    
+<head>  
+<title> Get Rich </title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Stylish" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+    
+    
+    
+   <style>
+    
+       
+   body { 
+			background-color: darkgreen;
+       margin: 0;
+		}
+		
+       
+       
+       
+       #contain {
+           
+         text-align: center;
+        
+          
+          
+       }
+       
+      
+       
+     
+       
+       
+       
+        
+       
+       div.para {
+            
+           width: 100%;
+       }
+       
+       div.para p {
+        
+           font-family: 'Roboto Slab', serif;
+           font-size: 18px;
+           padding: 15px 20% 25px 20%;
+            text-align: center; 
+           color: black;
+           line-height: 28px;
+          
+            
+            
+       }
+       
+       .pr {
+     
+        margin:  20% auto;   
+         background-color: white;
+       max-width: 70%; 
+        min-width: 45%;
+           text-align: center;
+           
+       }
+       
+       .prompt {
+        line-height: 50px;   
+         padding: 23px;   
+        font-family: 'Roboto Slab', serif;
+        font-size: 30px;
+           
+       }
+       
+       input {
+        
+        max-width: 95%;
+        width: 160px;   
+        font-size: 15px;   
+        padding: 10px; 
+        font-family: 'Roboto Slab', serif;   
+        border: black solid 3px;
+         margin: 0 auto;
+         border-radius: 40px;  
+       }
+       
+       button {
+           
+        height: 90px;
+        width:150px;
+        font-size: 40px;  
+       font-family: 'Stylish', sans-serif;   
+        font-weight: 900;   
+         border: solid black 4px;
+         background-color: white;
+         margin-bottom: 20px;
+            
+       }
+       
+        
+       
+        
+       
+       
+       button.next {
+           
+         
+           width: 120px;
+       }
+       
+
+       
+       
+       .finale {
+           
+         
+         color: crimson;
+           
+       }
+       
+        
+       
+       
+       p.small {
+           
+        font-size: 18px;
+        text-align: none;   
+        padding: 15px;   
+        line-height: 25px;
+    
+           
+       }
+       
+       
+       
+         .navbar {
+         
+    background-color: rgba(255, 2555, 255, 1);
+     overflow: hidden;
+   
+         text-align: center;
+ bottom: 0;
+  width: 100%;
+   height: 35px;      
+   position: fixed; 
+                   padding: 2vh;     
+   
+   
+              
+     }
+     
+     .navbar a {
+         
+      font-size: 3vh;
+        font-family: 'Roboto Slab', serif;
+         letter-spacing: 7px; 
+   
+             
+      color: black;
+  text-decoration: none;
+     }
+     
+           .navbar a:hover {
+               
+            color: green;   
+           }  
+     
+           
+               
+       
+         
+    </style> 
+    
+</head>    
+    
+
+<body>
+     <div class="navbar"><a href="front_page.html">Back to Main Page<br></a></div> 
+   <div id="contain">  
+        
+   <div class="begin"> 
+        
+       <div class="para">
+           <p> 
+     
+       </p>
+       </div>
+         
+    <button class="but" onclick="execute()"> Begin </button>
+       
+      
+       
+       
+       </div>  </div>
+    
+       <div class="pr"> 
+  <div class="prompt"></div>  
+           
+  <button class="next">Next</button> 
+       </div>
+       
+       <div class="finale"></div>
+       
+    <script type="text/javascript">
+        
+       
+        
+        function first()
+{ $('.next').hide();                
+$('.pr').hide(); 
+}
+  first();      
+        
+     
+        
+        
+        
+        
+      function execute()
+        
+         
+{                  
+   $('.begin').hide();
+    $('.next').show();
+    $('.pr').show();
+     
+        
+  var prompts = [
+ 'Noun:',
+ 'Plural noun:',
+ 'Place:',
+ 'Adverb:',
+ 'Friend&#39s name:',     
+ 'Adjective:',
+ 'Plural noun:',
+ 'Place:',
+ 'Number:',
+ 'Adjective:',
+ 'Verb:',
+ 'Adjective:',
+ 'Noun:',
+ 'Number:',
+ 'Verb:',
+ 'Noun:',
+ 'Animal:',     
+ 'Profession:',
+ 'Room:',    
+ 'Verb ending with ing:',
+ 'Famous person:'     
+  
+      
+      ];  
+        
+  var answers = [];      
+    
+  var currentPrompt = 0;
+        
+         
+        var nextPrompt = function () {
+             
+  if (currentPrompt != 0) {
+    answers.push($('input').val());
+  }
+   
+      if (currentPrompt < prompts.length) {      
+      
+  
+          $('.prompt').html(prompts[currentPrompt] + '<br><input type="text">'); 
+     currentPrompt = currentPrompt + 1;       
+        }
+        
+   else {
+       
+   showFinal();   
+   }  
+            
+            
+            
+          }
+        
+        var showFinal = function() {
+	   $('.prompt').html('<p class="small">How to Get Rich <br><br><br> Do you dream of a owning a big <span class="finale"> '+answers[0]+' </span>  and fancy <span class="finale">'+answers[1]+'</span>, but can&#39t afford them? Do you dream of vacationing in <span class="finale">'+answers[2]+'</span>, but don&#39t have the money? <br><br> Well, you&#39ve come to the right place. The key to making money <span class="finale">'+answers[3]+'</span> is by studying what succesful people do. For example, the billionaire <span class="finale">'+answers[4]+'</span> made their fortune by selling <span class="finale">'+answers[5]+'</span> <span class="finale">'+answers[6]+'</span> in <span class="finale">'+answers[7]+'</span>. You, too, can start your own business. All you need is <span class="finale">'+answers[8]+'</span> dollars and a <span class="finale">'+answers[9]+'</span> website to start you off. Confidence is also important- learn to <span class="finale">'+answers[10]+'</span> in front of people, because a <span class="finale">'+answers[11]+'</span> person can sell anything. <br><br> But what should you sell? Right now, <span class="finale">'+answers[12]+'</span> is a hot industry, since a pound of <span class="finale">'+answers[12]+'</span> is worth  <span class="finale">'+answers[13]+'</span> million dollars. Or, you could make an app for people who love to <span class="finale">'+answers[14]+'</span>, or an app for <span class="finale">'+answers[15]+'</span> rentals. Or maybe you could start a <span class="finale">'+answers[16]+'</span> grooming service. The possibilities are endless! <br><br> Just remember, getting rich takes time. <span class="finale">'+answers[4]+'</span> worked as a <span class="finale">'+answers[17]+'</span> and lived in their parents&#39 <span class="finale">'+answers[18]+'</span> before they made their first million. If you dedicate yourself, and get into the habit of <span class="finale">'+answers[18]+'</span> every day, then before you know it you&#39ll be richer than <span class="finale">'+answers[19]+'</span>. </p>');
+            
+            $('button').hide();
+        }
+          
+   $('.next').click(function() {
+      nextPrompt();
+  });      
+  nextPrompt(); 
+        
+        }
+    </script>
+    </div> 
+</body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
+ 

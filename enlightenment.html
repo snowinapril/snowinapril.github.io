@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    
+<head>  
+<title> Enlightenment </title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Stylish" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+    
+    
+    
+   <style>
+    
+       
+   body { 
+			background: white no-repeat center   fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+       
+		}
+		
+       
+       
+       
+       #contain {
+           
+         text-align: center;
+        
+          
+          
+       }
+       
+      
+       
+     
+       
+       
+       
+        
+       
+       div.para {
+            
+           width: 100%;
+       }
+       
+       div.para p {
+        
+           font-family: 'Roboto Slab', serif;
+           font-size: 25px;
+           padding: 15px 20% 25px 20%;
+            text-align: center; 
+           color: black;
+           line-height: 28px;
+          
+            
+            
+       }
+       
+       .pr {
+           
+            
+        margin:  20% auto;   
+        background-color: white;
+       max-width: 80%; 
+        border-radius: 45px;
+        min-width: 45%;   
+           
+       }
+       
+       .prompt {
+        line-height: 50px;   
+         padding: 23px;   
+        font-family: 'Roboto Slab', serif;
+        font-size: 24px;
+           
+       }
+       
+       input {
+        
+        max-width: 95%;
+        width: 160px;   
+        font-size: 15px;   
+        padding: 10px; 
+        font-family: 'Roboto Slab', serif;   
+        border: black solid 3px;
+         margin: 0 auto;
+         border-radius: 40px;  
+       }
+       
+       button {
+           
+        height: 90px;
+        width:150px;
+        font-size: 40px;  
+       font-family: 'Stylish', sans-serif;   
+        font-weight: 900;   
+         border: solid black 4px;
+         background-color: white;
+         margin-bottom: 20px;
+            
+       }
+       
+        
+       
+        
+       
+       
+       button.next {
+           
+ 
+           width: 120px;
+       }
+       
+
+       
+       
+       .finale {
+           
+         
+         color:darkorchid;
+           
+       }
+       
+        
+       
+       
+       p.small {
+           
+        font-size: 23px;
+        text-align: none;   
+        padding: 8px;   
+        line-height: 35px;
+    
+           
+       }
+       
+       
+       
+       
+       .namaste {
+           background: url(singlenamaste.jpg);
+           height: 300px;
+           width: 350px;
+           left: -900px;
+           animation: whoosh 9s linear  infinite;
+               animation-direction: normal;
+           margin-top: 50px;
+           margin-bottom: 70px;
+        
+               
+       }
+       
+       
+       p.namaste {
+           
+        animation: none;
+           margin-top: 1px;
+        margin-bottom: 10px;
+           position: relative;
+        left: 30%;
+           width: 350px;
+           
+       }
+       
+       
+       #cloud {
+         background: url(dumbcloud.jpg);
+           height: 100px;
+           width: 200px;
+           position: relative;
+           left: 800px;
+            animation: cloudd 9s linear  infinite;
+            margin-top: 50px;
+           margin-bottom: 70px;
+            
+ 
+           
+       }
+       
+       @keyframes cloudd {
+           
+           
+           from { 
+             
+           
+               
+           }  
+           
+           to{
+               
+       transform: translate(-1200px)
+              
+           }
+           
+       }
+       
+       @keyframes whoosh {
+       
+        from {
+             
+           
+               
+           }  
+           
+           to{
+               
+       transform: translate(1200px)
+              
+           }
+           
+           
+       }
+       
+        .navbar {
+         
+    background-color: rgba(255, 2555, 255, 1);
+     overflow: hidden;
+   
+         text-align: center;
+ bottom: 0;
+  width: 100%;
+   height: 35px;      
+   position: fixed; 
+                   padding: 2vh;     
+   
+   
+              
+     }
+     
+     .navbar a {
+         
+      font-size: 3vh;
+        font-family: 'Roboto Slab', serif;
+         letter-spacing: 6px; 
+         font-weight: bolder;
+   
+             
+      color: black;
+  text-decoration: none;
+     }
+     
+           .navbar a:hover {
+               
+            color: palevioletred;   
+           }  
+     
+           
+               
+       
+         
+           
+           
+       
+    </style> 
+    
+</head>    
+    
+
+<body>
+    
+    <div class="navbar"><a href="front_page.html">Back to Main Page<br></a></div>
+     
+   <div id="contain">  
+        
+   <div class="begin"> 
+        
+       
+       <div class="big"> 
+          
+         
+      <div class="namaste">
+           
+          
+           
+           
+           </div>     
+           
+       <div class="para">
+           <p> 
+      Have you ever wanted to understand the truth about the nature of reality? Well, you've come to the right place.
+       </p>
+       </div>
+        </div> 
+    <button class="but" onclick="execute()"> Begin </button>
+       
+       <div id="cloud"></div>
+       
+       
+       </div>
+       <div class="pr"> 
+  <div class="prompt"></div>   
+  <button class="next">Next</button> 
+       </div>
+       
+       <div class="finale"></div>
+       
+    <script type="text/javascript">
+        
+       
+        
+        function first()
+{ $('.next').hide();                
+$('.pr').hide(); 
+}
+  first();      
+        
+    
+     
+        
+      function execute()
+        
+         
+{                  
+   $('.begin').hide();
+    $('.next').show();
+    $('.pr').show();
+     
+        
+  var prompts = [
+ 'Plural noun:',
+ 'Plural noun:',
+ 'Your name:',
+ 'Adjective:',
+ 'Body part:',     
+ 'Verb ending with ing:',
+ 'Plural noun:',
+ 'Adjective:',
+ 'Adjective:',
+ 'Animal:',
+ 'Verb ending with ing:',
+ 'Body part:',
+ 'Place:',
+ 'Plural noun:',
+ 'Adjective:',
+ 'Historical figure:',
+ 'Body of water:',     
+ 'Noun:',
+  'Adjective:'    
+      ];  
+        
+  var answers = [];      
+    
+  var currentPrompt = 0;
+        
+         
+        var nextPrompt = function () {
+             
+  if (currentPrompt != 0) {
+    answers.push($('input').val());
+  }
+   
+      if (currentPrompt < prompts.length) {      
+      
+  
+          $('.prompt').html(prompts[currentPrompt] + '<br><input type="text">'); 
+     currentPrompt = currentPrompt + 1;       
+        }
+        
+   else {
+       
+   showFinal();   
+   }  
+            
+            
+            
+          }
+        
+        var showFinal = function() {
+	   $('.prompt').html('<p class="namaste"></p><br> <p class="small">The Path to Enlightenment <br><br><br> In this age of <span class="finale"> '+answers[0]+' </span>  and <span class="finale">'+answers[1]+'</span>, people are lost. We are all searching for truth. But where can it be found? <br><br> The Great <span class="finale">'+answers[2]+'</span>, a <span class="finale">'+answers[3]+'</span> thinker, once said: "Happiness is found in the <span class="finale">'+answers[4]+'</span>. Once you stop <span class="finale">'+answers[5]+'</span> away from destiny, and allow the <span class="finale">'+answers[6]+'</span> of the Universe to flow through you, then <span class="finale">'+answers[7]+'</span> things will happen in your life. Once you realize that the meaning of existence is <span class="finale">'+answers[8]+'</span>, and that consciousness is merely a <span class="finale">'+answers[9]+'</span> <span class="finale">'+answers[10]+'</span> through the stars, you will find peace." <br><br> With this in mind, you should learn to free your <span class="finale">'+answers[11]+'</span> from the physical world. <span class="finale">'+answers[12]+'</span> is a great place to start, since it is full of enlightened <span class="finale">'+answers[13]+'</span>. Sit in a  <span class="finale">'+answers[14]+'</span> position and think about <span class="finale">'+answers[15]+'</span>. Channel the energy of the <span class="finale">'+answers[16]+'</span> and remember, you are nothing but a <span class="finale">'+answers[17]+'</span>. When you begin to feel <span class="finale">'+answers[18]+'</span>, you&#39ll know that you&#39ve reached enlightenment.</p>');
+            
+            $('button').hide();
+        }
+          
+   $('.next').click(function() {
+      nextPrompt();
+  });      
+  nextPrompt(); 
+        
+        }
+    </script>
+    </div> 
+</body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
+ 
