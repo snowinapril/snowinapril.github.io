@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    
+<head> 
+    <title>
+    
+        Some Little Games
+    
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,600" rel="stylesheet">
+ <style>
+     
+     body {
+       margin: 0;  
+      background: url(bckrnd.jpg) no-repeat center   fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;   
+         
+         
+     } 
+     
+     li {
+         
+      list-style-type: none;
+      margin: 0 2vw;    
+      font-size: 3vh;
+         
+         
+         
+     }
+     
+     
+     li a {
+         
+    text-decoration: none;  
+    padding: 2vw; 
+    color: navy;
+    font-family: 'Oswald', sans-serif;
+    font-weight:500;     
+         
+     }
+     
+     .choose a{
+          color: white;
+          text-decoration: none;     
+     }
+     
+     li a:hover {
+         
+         background-color: gainsboro;
+ 
+         
+     }
+     
+     
+     @media only screen and (max-width: 500px) {
+
+  ul{
+    flex-direction: column;
+       
+  }
+  
+   
+  li{
+    margin: 0;
+  }
+ 
+  a{
+    display: block;
+  }
+         
+         button.top {
+             
+          display: block;
+          padding: 2vw;
+    font-size: 3vh;
+    background-color: #FFFFFF;
+    border: none;   
+    outline: none; 
+    cursor: pointer;
+    align-self: flex-start;         
+         }        
+}
+     
+     
+     
+     
+     
+     nav {
+         
+     width: 100vw;
+     background-color: rgba(255, 255, 255, 0.9)     
+         
+     }
+     
+     ul {
+         
+    padding: 3vh;     
+    margin: 0;
+    display: flex;
+          
+         
+     }
+     
+     button {
+         
+      display: none;   
+         
+     }
+     
+     #title {
+         
+         text-align: center;
+         margin: 10% 0 7% 35%;
+         background-color: rgba(255, 255, 255, 0.3); 
+         color: white;
+         letter-spacing: 8px;
+         font-size: 7vh;
+         padding: 1px   0;
+         font-family: 'Oswald', sans-serif; 
+         border: 20px solid;
+         border-right: none;
+         font-weight: 600; 
+     }
+     
+     .floating {
+              color: white;
+         font-size: 4vh;
+        margin: 0 0 15px 15px;
+         padding: 0;
+         position: relative;
+         left: 7px;    
+         font-family: 'Oswald', sans-serif; 
+         letter-spacing: 7px;
+         font-weight: 200;
+         
+         
+     }
+     
+     a {
+     text-decoration: none;     
+         
+     }
+     
+     .choose {
+         
+      text-align: left;
+         
+   margin: 1% 30% 3% 0;
+         background-color: rgba(255, 255, 255, 0.3); 
+         color: white;
+         font-size: 6vh;
+         padding: 20px 20px;
+         font-family: 'Oswald', sans-serif;
+         letter-spacing: 6px;
+         
+     }
+     
+     .choose:hover {
+       background-color:    
+        rgba(255, 255, 255, 0.8);
+         color:  #0f203d;
+         
+     }
+     
+      
+     
+     div.floating {
+         
+           margin-top: 50px;
+     }
+     
+     .navbar {
+         
+    background-color: white;
+          overflow: hidden;
+  padding-top: 50px;
+         text-align: center;
+  bottom: 0;
+  width: 100%;
+   height: 100px;      
+  margin-top: 80px;       
+     }
+     
+     .navbar a {
+         
+      font-size: 4vh;
+         font-family: 'Oswald', sans-serif;
+         letter-spacing: 5px; 
+  
+         padding-top: 50px;
+     }
+     
+     .navbar a:hover {
+         
+         color: aqua;
+     }
+       
+    </style> 
+    
+</head>    
+    
+
+ 
+     
+   <body>
+    
+    
+  <nav>
+       
+<ul>
+   <button class="top">X</button>   
+ <li><a href="additionalinfo.html">Additional Info</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="otherprojects.html"> Other Projects</a></li>
+   
+      </ul>
+       
+       
+       
+       </nav>  
+       
+       <div id="title">
+       
+      <p>  Some Little Games </p>
+       </div>
+       
+       <p class="floating"> Choose your Own Adventure:</p>
+       
+        <a href="submarine.html"><p class="choose"> The Ocean Floor </p> </a> 
+       
+       
+       
+       <div class="floating">Mad Libs: </div>
+       
+       <div id="madlibs">
+       <a href="flat_Earth_madlibs.html"><p class="choose">  Earth</p></a> 
+           
+           <a href="getrich.html"> <p class="choose">Money</p></a>
+           
+        <a href="enlightenment.html"><p class="choose">Meditation</p></a> 
+       </div>
+    
+       
+   <div class="navbar"><a href="front_page.html">Back to Top </a>  </div>    
+       
+       
+    
+    <script>
+       
+     $(document).ready(
+     
+     function(){
+    $("button").click(function(){
+        
+        if($("button").text() == "☰"){
+  $("button").text("X");
+}else{        
+  $("button").text("☰");      
+}
+        
+ $("li").toggle("slow");        
+    });     
+     });  
+       
+       
+       
+       
+       </script>
+    
+    
+    </body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
+ 
